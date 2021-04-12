@@ -4,19 +4,24 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LojaVirtualTest
 {
     [TestClass]
-    public class MaiorPrecoTest
+    public class CarrinhoDeComprasTest
     {
+        private CarrinhoDeCompras Inicializa()
+        {
+            return new CarrinhoDeCompras();
+        }
+
         [TestMethod]
         public void DeveRetornarZeroSeCarrinhoVazio()
         {
-            CarrinhoDeCompras carrinho = new CarrinhoDeCompras();            
+            var carrinho = Inicializa();
             Assert.AreEqual(0.0, carrinho.MaiorValor(), 0.0001);
         }
 
         [TestMethod]
         public void DeveRetornarValorDoItemSeCarrinhoCom1Elemento()
         {
-            CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+            var carrinho = Inicializa();
             carrinho.Adiciona(new Item("Geladeira", 1, 900.0));
             Assert.AreEqual(900.0, carrinho.MaiorValor(), 0.0001);
         }
@@ -24,7 +29,7 @@ namespace LojaVirtualTest
         [TestMethod]
         public void DeveRetornarMaiorValorSeCarrinhoContemMuitosElementos()
         {
-            CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+            var carrinho = Inicializa();
             carrinho.Adiciona(new Item("Geladeira", 1, 900.0));
             carrinho.Adiciona(new Item("Fogão", 1, 1500.0));
             carrinho.Adiciona(new Item("Maquina de lavar", 1, 750));
