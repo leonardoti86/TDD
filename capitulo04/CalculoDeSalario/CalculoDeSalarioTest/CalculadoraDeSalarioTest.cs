@@ -28,9 +28,36 @@ namespace CalculoDeSalarioTest
         public void DeveCalcularSalarioParaDBAComSalarioAbaixoDoLimite()
         {
             CalculadoraDeSalario calculadora = new CalculadoraDeSalario();
-            Funcionario dba = new Funcionario("Mauricio", 500, Cargo.DBA);
+            Funcionario dba = new Funcionario("Mauricio", 1500, Cargo.DBA);
             double salario = calculadora.CalculaSalario(dba);
-            Assert.AreEqual(500 * 0.85, salario, 0.00001);
+            Assert.AreEqual(1500 * 0.85, salario, 0.00001);
+        }
+
+        [TestMethod]
+        public void DeveCalcularSalarioParaDBAsComSalarioAcimaDoLimite()
+        {
+            CalculadoraDeSalario calculadora = new CalculadoraDeSalario();
+            Funcionario dba = new Funcionario("Mauricio", 4500.0, Cargo.DBA);
+            double salario = calculadora.CalculaSalario(dba);
+            Assert.AreEqual(4500.0 * 0.75, salario, 0.00001);
+        }
+
+        [TestMethod]
+        public void DeveCalcularSalarioParaTestadorComSalarioAbaixoDoLimite()
+        {
+            CalculadoraDeSalario calculadora = new CalculadoraDeSalario();
+            Funcionario dba = new Funcionario("Mauricio", 1000, Cargo.DBA);
+            double salario = calculadora.CalculaSalario(dba);
+            Assert.AreEqual(1000 * 0.85, salario, 0.00001);
+        }
+
+        [TestMethod]
+        public void DeveCalcularSalarioParaTestadorComSalarioAcimaDoLimite()
+        {
+            CalculadoraDeSalario calculadora = new CalculadoraDeSalario();
+            Funcionario dba = new Funcionario("Mauricio", 5000.0, Cargo.DBA);
+            double salario = calculadora.CalculaSalario(dba);
+            Assert.AreEqual(5000.0 * 0.75, salario, 0.00001);
         }
     }
 }
