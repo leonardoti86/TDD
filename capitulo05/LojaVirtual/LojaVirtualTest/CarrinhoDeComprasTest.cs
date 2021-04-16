@@ -6,10 +6,10 @@ namespace LojaVirtualTest
     [TestClass]
     public class CarrinhoDeComprasTest
     {
-        private CarrinhoDeCompras Inicializa()
-        {
-            return new CarrinhoDeCompras();
-        }
+        //private CarrinhoDeCompras Inicializa()
+        //{
+        //    return new CarrinhoDeCompras();
+        //}
 
         [TestMethod]
         public void DeveRetornarZeroSeCarrinhoVazio()
