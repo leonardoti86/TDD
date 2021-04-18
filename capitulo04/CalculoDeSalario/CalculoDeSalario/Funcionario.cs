@@ -4,12 +4,12 @@ using System.Text;
 
 namespace CalculoDeSalario
 {
-    public enum Cargo
-    {
-        DESENVOLVEDOR,
-        DBA,
-        TESTADOR
-    }
+    //public enum Cargo
+    //{
+    //    DESENVOLVEDOR,
+    //    DBA,
+    //    TESTADOR
+    //}
 
     public class Funcionario
     {
