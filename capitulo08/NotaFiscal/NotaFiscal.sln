@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotaFiscal", "NotaFiscal\NotaFiscal.csproj", "{48C8FE96-A0D3-416B-B967-5E90B9075605}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotaFiscalApp", "NotaFiscal\NotaFiscalApp.csproj", "{48C8FE96-A0D3-416B-B967-5E90B9075605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotaFiscalTest", "NotaFiscalTest\NotaFiscalTest.csproj", "{F82B29B2-9DE9-44B2-B4EF-80CA5CE150DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{48C8FE96-A0D3-416B-B967-5E90B9075605}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48C8FE96-A0D3-416B-B967-5E90B9075605}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48C8FE96-A0D3-416B-B967-5E90B9075605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82B29B2-9DE9-44B2-B4EF-80CA5CE150DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82B29B2-9DE9-44B2-B4EF-80CA5CE150DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82B29B2-9DE9-44B2-B4EF-80CA5CE150DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82B29B2-9DE9-44B2-B4EF-80CA5CE150DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
