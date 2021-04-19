@@ -6,11 +6,21 @@ namespace NotaFiscalApp.Model
 {
     public class GeradorDeNotaFiscal
     {
+        private NFDao Dao;
+        private SAP Sap;
+
+        public GeradorDeNotaFiscal(NFDao dao, SAP sap)
+        {
+            Dao = dao;
+            Sap = sap;
+        }
+
         public NotaFiscal Gera(Pedido pedido)
         {
             NotaFiscal nf = new NotaFiscal(pedido.Cliente, pedido.ValorTotal * 0.94, DateTime.Now);
 
-            new NFDao().Persiste(nf);
+            Dao.Persiste(nf);
+            Sap.Envia(nf);
 
             return nf;
         }
