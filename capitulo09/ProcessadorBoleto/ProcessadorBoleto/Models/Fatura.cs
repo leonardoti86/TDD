@@ -16,6 +16,22 @@ namespace ProcessadorBoleto.Models
             Pagamentos = new List<Pagamento>();
             Pago = false;
         }
+
+        public void AdicionaPagamento(Pagamento pagamento)
+        {
+            Pagamentos.Add(pagamento);
+
+            double valorTotal = 0;
+            foreach (var p in Pagamentos)
+            {
+                valorTotal += p.Valor;
+            }
+
+            if (valorTotal >= Valor)
+            {
+                Pago = true;
+            }
+        }
     }
 
     public enum MeioDePagamento
